@@ -1,0 +1,24 @@
+
+<!-- saved from url=(0182)https://stackauth.com/auth/global/read?request=RmLwubtXfubS3fL3hOEs0p4xAR7pOLWg8Emd9UHinZxHjXdiYFeDSjA8jx%2B1Ul%2FLp2L942hzVhO5DRZiAyn%2BiQ%3D%3D&nonce=xYd2VQAAAABLaAM%2Bhk7zZA%3D%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <script>
+                  var data = {"ReadSession":"https://stackauth.com/auth/global/read-session","Request":"RmLwubtXfubS3fL3hOEs0p4xAR7pOLWg8Emd9UHinZxHjXdiYFeDSjA8jx+1Ul/Lp2L942hzVhO5DRZiAyn+iQ==","Nonce":"xYd2VQAAAABLaAM+hk7zZA==","Referrer":"http://stackoverflow.com/questions/4685534/android-json-to-php-server-and-back","StorageName":"GlobalLogin"};
+
+                  var toMsg = window.parent;
+
+                  var obj = localStorage ? localStorage.getItem(data.StorageName) : null;
+                  if(obj != null) {
+                  var req = new XMLHttpRequest();
+                  req.open('POST', data.ReadSession+'?request='+encodeURIComponent(data.Request)+'&nonce='+encodeURIComponent(data.Nonce)+'&seriesAndToken='+encodeURIComponent(obj), false);
+                  req.send(null);
+                  
+                    if(req.status == 200){
+                      toMsg.postMessage(req.responseText, data.Referrer);
+                    }else{
+                      toMsg.postMessage('No Session', data.Referrer);
+                    }
+                  }else{
+                    toMsg.postMessage('No Local Storage', data.Referrer);
+                  }
+                  </script>
+                  </head><body></body></html>

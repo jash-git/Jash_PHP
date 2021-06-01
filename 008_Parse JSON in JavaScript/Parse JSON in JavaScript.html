@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Parse JSON in JavaScript?</title>
+	</head>
+	<body>
+		<script>
+		var json = '{"data":{"name":"\u6839","data":{"6":{"name":"\u6232\u5287","needPassword":"0"},"5":{"name":"\u7d9c\u5408","needPassword":"0"},"7":{"name":"\u7d9c\u85dd","needPassword":"0"},"4":{"name":"\u65b0\u805e","needPassword":"0"},"13":{"name":"\u9ad4\u80b2","needPassword":"0"},"14":{"name":"\u96fb\u5f71","needPassword":"0"},"15":{"name":"\u5152\u7ae5\u5361\u901a","needPassword":"0"},"16":{"name":"\u77e5\u6027\u6559\u80b2","needPassword":"0"},"17":{"name":"\u6210\u4eba","needPassword":"1"}}},"status":"T","errMsg":""}';
+		//var json = '{"result":"¤¤¤å","count":"100"}';
+		/*
+		var json = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+*/
+		obj = JSON.parse(json);
+		alert(obj.data.name);//alert(obj.data.data[0].name);
+		//alert(obj.result);
+		//alert(obj.employees[1].firstName);
+		</script>
+	</body>
+</html>

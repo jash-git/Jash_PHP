@@ -1,0 +1,28 @@
+00.guestbook.sql-資料庫的SQL檔，用來透過phpmyadmin來建立對應DB
+	說明:
+	├01.AUTO_INCREMENT 數值編號會累加，而且不是從現有資料累加，而是從這個table曾有的資料累加。
+	├02.COMMENT 用來寫註解
+01.config.inc.php-定義連結資料庫的所有資訊和執行連結資料庫，因此每隻PHP都要呼叫
+	說明:
+	├01.定義所有DB連結的所有常數
+	├02.透過mysql_connect、mysql_query、mysql_select_db函數來連結DB
+02.index.php-該專案的首頁，主要用來呈現所有留言和連結其他功能頁面
+	說明:
+	├01.LEFT JOIN會返回左側(info)資料表中所有資料列，就算沒有符合連接條件，而右側(reply)資料表中如果沒有匹配的資料值就會顯示為「NULL」。
+	├02.利用$recordSql=$sql." LIMIT ".$page*$pagesize.",".$pagesize;//拼接翻頁SQL語句，用LIMIT限制取得資料筆數
+03.login.php-登錄成管理者身份
+	說明:
+	├01.利用if(isset($_POST['Submit']))判墮是否按下Submit
+	├02.利用$_SESSION['login']=true; 設置登錄成功標識
+	├03.利用echo "<script>location.href='index.php';</script>";執行跳回首頁
+	├04.利用exit();離開該PHP
+04.post.html-訪客留言頁面，會呼叫sent.php來處理後續動作
+05.sent.php-將訪客留言寫到DB中
+	說明:
+	├01.利用$content_time = time();抓取目前時間
+	├02.利用strlen($content)>400判斷留言長度
+	├03.利用<script> alert("輸入的留言內容太長！"); history.go(-1); </script>返回前一頁
+	├04.利用if(mysql_query($insertSql))判斷SQL是否正確執行
+06.reply.php-管理者身份回復
+	說明:
+	├01.利用<inputtype="hidden"name="info_id"value="<?phpecho$_GET['id']?> "size="20">取得從index.php傳送過來的參數

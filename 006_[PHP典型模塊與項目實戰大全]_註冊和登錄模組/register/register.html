@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Registering form</title>
+	</head>
+	<body>
+		<form name="send" method="post" action="register.php" onSubmit="return Check()">
+			<table width="330" border="0" align="center" cellpadding="5" bgcolor= "#eeeeee">
+				<font color="#FF6699">*</font>為必填項
+				<tr>
+					<td width="40%">用戶名：</td>
+					<td>
+						<input name="username" type="text" id="username"><font color="#FF6699">*</font>
+					</td>
+				</tr>
+				<tr>
+					<td>密碼：</td>
+					<td>
+						<input name="password" type="password" id="password"><font color="#FF6699">*</font>
+					</td>
+				</tr>
+				<tr>
+					<td>重複密碼：</td>
+					<td>
+						<input name="cpassword" type="password" id="cpassword"><font color="#FF6699">*</font>
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>
+						<input name="email" type="text" id="email">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="Submit" value="提交">
+						<input type="reset" name="reset" value="重置">
+					</td>
+				</tr>
+			</table>
+		</form>
+		<script language="javascript">
+		function Check()// 驗證表單數據有效性的函數
+		{
+			if (document.send.username.value=="") 
+			{
+				window.alert('請輸入用戶名!'); 
+				return false;
+			}
+			if (document.send.username.value.length<2) 
+			{
+				window.alert('用戶名長度必須大於2!'); 
+				return false;
+			}
+			if (document.send.password.value=="") 
+			{
+				alert('請輸入密碼!'); 
+				return false;
+			}
+			if (document.send.password.value.length<6) 
+			{
+				alert('密碼長度必須大於6!'); 
+				return false;
+			}
+			if (document.send.password.value!= document.send.cpassword.value) 
+			{
+				alert('確認密碼與密碼不一致!'); 
+				return false;
+			}
+			if (document.send.email.value=="")
+			{
+				alert('請輸入Email!');
+				return false;
+			}
+			if(document.send.email.value.indexOf("@")==-1)
+			{
+				alert('請輸入有效的Email地址!'); return false;
+			}
+			if (document.send.code.value=="")
+			{
+				alert('請輸入驗證碼!'); 
+				return false;
+			}
+			return true;
+		}
+		</script>
+	</body>
+</html>

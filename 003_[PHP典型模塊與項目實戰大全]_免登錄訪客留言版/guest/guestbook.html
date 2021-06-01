@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+		<title>留言瀏覽模版</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!--中部內容開始-->
+		<!-- 用<div> 可定義文檔中的分區或節（division/section）-->
+		<!-- <ul> 為區塊元素 (block element) ，將標記內容顯示成符號項目清單，每個項目使用 <li> 標記-->
+		<div id="content">
+			<div id="main">
+				<ul>
+					<li id="main_top"></li>
+					<li id="main_middle" style="padding:0px 0px 15px 0px;">
+					<div class="title_cr">留言板</div>
+					<table width="872" border="0" align="center" cellpadding="0" cellspacing="0" class="tab_bbs">
+						<tr> <!-- tab_bbs 列01-->
+							<td colspan="2" class="title_bbs"><!-- tab_bbs 列01行01-->
+								<!-- tab_bbs 列01行01內的表格 -->
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="50" class="title_b">
+											&nbsp;
+										</td>
+										<td width="400" class="title_b">
+											<a href="reply.php?id=<?php echo $rs->id?>">回復</a> | <a href="delete.php?id=<?php echo $rs->id?>">刪除</a>&nbsp;&nbsp;&nbsp;&nbsp;建議
+										</td>
+										<td width="100" class="title_b">
+											<!--留言人-->
+											[留言人姓名]
+										</td>
+										<td class="title_b">
+											<!--留言時間-->
+											[留言提交時間]
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr><!-- tab_bbs 列02-->
+							<td width="45">
+								&nbsp;
+							</td>
+							<td width="823" class="td_bbs">
+								<!--留言內容開始-->
+								[留言內容展示區]
+								<!--留言內容結束-->
+							</td>
+						</tr>
+						<tr><!-- tab_bbs 列03-->
+							<td width="45" class="td_bbswhite">
+								&nbsp;
+							</td>
+							<td class="td_bbsgray">
+								回復標題：你好   回復人：管理員 回復時間：[2010/01/26]
+							</td>
+						</tr>
+						<tr><!-- tab_bbs 列04-->
+							<td width="45" class="td_bbs">
+								&nbsp;
+							</td>
+							<td>
+								<!--回復留言內容開始-->
+								[管理員回復留言區]
+								<!--回復留言內容結束-->
+							</td>
+						</tr>
+					</table>
+					<div style="clear:both;"></div>
+					<div id="dashline"></div>
+					<!--頁碼開始-->
+					<div id="page" style="margin-right:30px; margin-top:8px;"> 
+						<span class="grayborder" style="background-color:#F6F6F6;">
+							<a href="4">下一頁</a>
+						</span>
+						……………
+						<span class="grayborder" style="background-color:#F6F6F6;">
+							<a href="5">上一頁</a>
+						</span>
+					</div>
+					<!--頁碼結束-->
+					</li>
+					<li id="main_bt"></li>
+				</ul>
+			</div>
+		</div>
+		<!--中部內容結束-->
+	</body>
+</html>

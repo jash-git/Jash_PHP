@@ -1,0 +1,36 @@
+00.register.sql-資料庫的SQL檔，用來透過phpmyadmin來建立對應DB
+	說明:
+	├01.AUTO_INCREMENT 數值編號會累加，而且不是從現有資料累加，而是從這個table曾有的資料累加。
+	├02.COMMENT 用來寫註解
+
+01.function.php-防止SQL被攻擊的檢查函數
+	說明:
+	├01.PHP陣列變數標準定義語法和存取方式
+	├02.PHP字串轉小寫函數strtolower
+	├03.PHP字串比較函數strstr
+
+02.is_login.php-判斷是否已登錄狀態
+	說明:
+	├01.PHP判斷變數是否存在函數empty
+	├02.PHP設定輸出語系語法 header("Content-Type:text/html; charset=utf-8");
+	
+03.login.html-登錄頁面
+	說明:
+	├01.HTML指定輸出語系語法 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	├02.簡易CSS語法直接放在<head>內
+	├03.欄位驗證的javascript-Check()
+
+04.login.php-真正處理登錄判斷程式
+	說明:
+	├01.判斷搜尋結果是否有找到 mysql_num_rows($result) > 0	
+	
+05.register.html-註冊頁面
+	說明:
+	├01.欄位驗證的javascript-Check()
+
+06.register.php-真正處理註冊程式
+	說明:
+	├01.判斷搜尋結果是否有找到mysql_num_rows($result) > 0
+	├02.寫入註冊內容
+	
+07.test.php-測試網頁
