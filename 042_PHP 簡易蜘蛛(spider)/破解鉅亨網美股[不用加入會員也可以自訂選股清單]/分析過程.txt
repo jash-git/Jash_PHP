@@ -1,0 +1,6 @@
+美股-AMZN	http://www.cnyes.com/ 
+	手動切換	http://www.cnyes.com/usastock/html5chart/AMZN.html
+		用F12找出	http://www.cnyes.com/usastock/ustopQM.aspx?code=AMZN
+
+台股-4904	http://www.cnyes.com/
+	手動切換	http://www.cnyes.com/twstock/profile/4904.htm

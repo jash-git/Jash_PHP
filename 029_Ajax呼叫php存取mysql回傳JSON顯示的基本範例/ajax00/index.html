@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <title>Hello world</title>
+    <script src="./jquery.js"></script>
+</head>
+<script>
+    $.ajax({
+        url:'api.php',
+        type:'get',
+        dateType:'json',
+        success:function(abc){
+            alert(typeof abc);
+			alert(abc);
+			alert(abc[0]);
+			alert(abc[1]);
+			var cart = JSON.parse ( abc );
+			alert(cart[0]);
+			alert(cart[1]);
+        }
+    });
+</script>
+</html>

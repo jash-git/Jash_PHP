@@ -1,0 +1,1 @@
+wget --no-check-certificate https://tw.stock.yahoo.com/q/q?s=4904

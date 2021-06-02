@@ -1,0 +1,1 @@
+wget --post-data="years=2016&months=07&days=09&hours=14&minutes=7" http://crazed-it.frog.tw/smart_firefighting/calculate_the_number.php -O log.txt

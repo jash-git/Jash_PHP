@@ -1,0 +1,1 @@
+wget --post-data="device_id=post&value=29.6&years=2016&months=06&days=05&hours=16&minutes=58&seconds=10" http://localhost:8080/sf/insert_table.php -O log.txt

@@ -1,0 +1,2 @@
+http://localhost:8080/Joomla/
+http://localhost:8080/Joomla/administrator/

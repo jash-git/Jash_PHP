@@ -1,0 +1,75 @@
+<?xml version ='1.0' encoding ='UTF-8' ?>
+<definitions name='Demo'
+  targetNamespace='https://www.samtseng.liho.tw/~samtz/soap/Demo'
+  xmlns:tns='https://www.samtseng.liho.tw/~samtz/soap/Demo'
+  xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+  xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+  xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+  xmlns='http://schemas.xmlsoap.org/wsdl/'>
+ 
+<message name='getRequest'>
+  <part name='name' type='xsd:string'/>
+</message>
+<message name='getResponse'>
+  <part name='Result' type='xsd:float'/>
+</message>
+
+<message name='AddRequest'>
+  <part name='a' type='xsd:float'/>
+  <part name='b' type='xsd:float'/>
+</message>
+<message name='AddResponse'>
+  <part name='Result' type='xsd:float'/>
+</message>
+ 
+<portType name='DemoPortType'>
+  <operation name='getDemo'>
+    <input message='tns:getRequest'/>
+ 
+    <output message='tns:getResponse'/>
+  </operation>
+  <operation name='Add'>
+    <input message='tns:AddRequest'/>
+ 
+    <output message='tns:AddResponse'/>
+  </operation>  
+</portType>
+ 
+<binding name='DemoBinding' type='tns:DemoPortType'>
+  <soap:binding style='rpc'
+    transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='getDemo'>
+    <soap:operation soapAction='urn:xmethods-delayed-demo#getDemo'/>
+    <input>
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-demo'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+ 
+    </input>
+    <output>
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-demo'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+    </output>
+  </operation>
+  <operation name='Add'>
+    <soap:operation soapAction='urn:xmethods-delayed-demo#Add'/>
+    <input>
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-demo'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-demo'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+    </input>
+    <output>
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-demo'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+    </output>
+  </operation>  
+</binding>
+ 
+<service name='DemoService'>
+  <port name='DemoPort' binding='DemoBinding'>
+    <soap:address location='http://crazed-it.frog.tw/tools/php_soap/server.php'/>
+ 
+  </port>
+</service>
+</definitions>

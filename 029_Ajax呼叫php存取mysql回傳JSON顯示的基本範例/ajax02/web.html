@@ -1,0 +1,22 @@
+﻿<html>
+	<head>
+	<script src="./jquery.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		 $.ajax({
+			url: "desc.php?id=123", 
+			type: "GET", 
+			success: function(response) {
+			  $('#div_name').html(response); 
+			}, 
+			error: function() {
+			  console.log("ajax error!"); 
+			}
+		 });
+		</script>
+		
+		<div id="div_name">
+		</div>
+	</body>
+</html>

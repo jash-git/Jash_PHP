@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>haorooms js局部列印案例</title>
+		<script type="text/javascript">   
+			function doPrint() {    
+				bdhtml=window.document.body.innerHTML;    
+				sprnstr="<!--startprint-->";    
+				eprnstr="<!--endprint-->";    
+				prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);    
+				prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));    
+				window.document.body.innerHTML=prnhtml; 
+				window.print();  
+				window.document.body.innerHTML="";
+				window.close();
+		}    
+		</script>
+	</head>
+
+	<body>
+		<p>1不需要列印的地方</p>
+		<p>2這裡不要列印啊</p>
+		<!--startprint--><!--注意要加上html裡star和end的這兩個標記，之前沒加，一直沒效果，誰叫咱們菜呢~-->
+		<h1>列印標題</h1>
+		<p>列印內容~~</p>
+		<!--endprint-->
+		<button type="button" onclick="doPrint()">列印</button>
+		<p>1haorooms博客不列印的地方啊哈哈哈哈</p>
+		<p>2</p>
+	</body>
+</html>

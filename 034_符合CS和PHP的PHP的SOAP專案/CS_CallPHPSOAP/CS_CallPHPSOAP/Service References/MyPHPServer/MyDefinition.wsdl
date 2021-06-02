@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:myTns" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="MyDefinition" targetNamespace="urn:myTns" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="SumRequest">
+    <wsdl:part name="Sum_a" type="xsd:int" />
+    <wsdl:part name="Sum_b" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="SumResponse">
+    <wsdl:part name="Sum_Result" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SubRequest">
+    <wsdl:part name="Sub_a" type="xsd:int" />
+    <wsdl:part name="Sub_b" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="SubResponse">
+    <wsdl:part name="Sub_Result" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="MyPortType">
+    <wsdl:operation name="SumData">
+      <wsdl:input message="tns:SumRequest" />
+      <wsdl:output message="tns:SumResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SubData">
+      <wsdl:input message="tns:SubRequest" />
+      <wsdl:output message="tns:SubResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyBinding" type="tns:MyPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SumData">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespaces" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespaces" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubData">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespaces" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespaces" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyService">
+    <wsdl:port name="MyPort" binding="wsdl:MyBinding">
+      <soap12:address location="http://crazed-it.frog.tw/tools/cs_soap/testserver.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

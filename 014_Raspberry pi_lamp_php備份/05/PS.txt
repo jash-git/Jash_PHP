@@ -1,0 +1,31 @@
+CREATE DATABASE `webdb` DEFAULT CHARACTER SET big5 COLLATE big5_chinese_ci;
+--------------
+cuty：客戶類別
+	├cutyno：客戶類別代碼
+	├cutyname：客戶類別名稱
+
+vety：廠商類別
+	├vetyno：廠商類別代碼
+	├vetyname：廠商類別名稱
+
+prty：產品類別
+	├prtyno：產品類別代碼
+	├prtyname：產品類別名稱
+
+prun：產品單位
+	├prunno：產品單位代碼
+	├prunname：產品單位名稱
+
+saty：銷售類別
+	├satyno：銷售類別代碼
+	├satyname：銷售類別名稱
+
+counter：計數器
+	├counterid：計數器代碼
+	├vendcnt：廠商編號計數器
+	├custcnt：客戶編號計數器
+	├prodcnt：產品編號計數器
+	├outicnt：出貨單號計數器
+	├trancnt：進貨單號計數器
+	├quotcnt：報價單號計數器
+	├purccnt：採購單號計數器

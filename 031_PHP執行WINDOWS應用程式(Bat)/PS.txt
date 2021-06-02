@@ -1,0 +1,1 @@
+PS.自己的[993_PHPshell]中的sample02有更標準的寫法

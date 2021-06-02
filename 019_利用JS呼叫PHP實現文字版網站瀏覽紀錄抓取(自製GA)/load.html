@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+		function ShowHello(){
+			document.getElementById('ShowBox').innerHTML='哈囉';
+		}	
+		</script>
+	</head>
+
+	<body onload="ShowHello()">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"> </script>
+		<script>
+			$(window).on('beforeunload', function(){
+				var data=location.href;
+				var url="http://127.0.0.1:8080/jpv/js_php_visitors.php?close=1&action=";
+				var aaa = url+data
+				jQuery.get(aaa);
+				//return "jashliao 部落格提醒您";
+			});	
+		</script>	
+		<script type="text/javascript">
+			var data=location.href;
+			var url="http://127.0.0.1:8080/jpv/js_php_visitors.php?close=0&action=";
+			var aaa = url+data
+			document.write("<script language=\"javascript\" type=\"text/javascript\" src=\"" + aaa + "\"><\/sc" + "ript>");			
+		</script>	
+		<span id="ShowBox"></span>
+	</body>
+
+</html>

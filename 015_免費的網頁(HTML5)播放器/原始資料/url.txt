@@ -1,0 +1,5 @@
+官網在這 http://www.sewise.com/?mod=index&do=product&key=7
+
+這一是款免費寫好了的Player(而且是open source),你只要把軟體下載,放到你的WEB server裡
+
+你就能透過html的方式撥放MP4、m3u8、OGA、WEBM、THEORA、FLV、F4V各種市面上通用的影片格式

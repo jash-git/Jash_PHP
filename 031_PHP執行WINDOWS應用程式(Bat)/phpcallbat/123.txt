@@ -1,0 +1,12 @@
+ Volume in drive D is 新增磁碟區
+ Volume Serial Number is 904E-C816
+
+ Directory of D:\USBWebserver v8.6\root\phpcallbat
+
+2016/08/19  上午 09:48    <DIR>          .
+2016/08/19  上午 09:48    <DIR>          ..
+2016/08/19  上午 09:48                 0 123.txt
+2016/08/19  上午 09:45                13 PHP.bat
+2016/08/19  上午 09:48                66 runbat.php
+               3 File(s)             79 bytes
+               2 Dir(s)  555,617,447,936 bytes free

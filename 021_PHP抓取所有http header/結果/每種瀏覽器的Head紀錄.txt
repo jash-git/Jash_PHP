@@ -1,0 +1,33 @@
+firefox
+
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-TW,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive 
+
+--------
+
+GOOGLE
+
+Host: localhost:8080 
+Connection: keep-alive 
+Cache-Control: max-age=0 
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8 
+Upgrade-Insecure-Requests: 1 
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 
+Accept-Encoding: gzip, deflate, sdch 
+Accept-Language: zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4 
+Cookie: ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22d502c40b8930f48f9842bc12c918bc69%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A3%3A%22%3A%3A1%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A109%3A%22Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F47.0.2526.106+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1452496490%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D9c8056acce65e9772970a16192a5d7d309e475db; ECS[visit_times]=11; ee_im_kuaizitech=ture; ee_im_adpartner=ture; _fjtads1=511; crtg_rta=; _fjpvnum1=6; _fjpermvid1=1457679031840-5916462237946689; mp_de68fb7561d61e2fa21b5d584e246ede_mixpanel=%7B%22distinct_id%22%3A%20%221536470e42710c-03e642894-424b0221-1fa400-1536470e428239%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; mp_9bf666011f2e0d6e333f9bfa242d0c21_mixpanel=%7B%22distinct_id%22%3A%20%221536470e42b11e-09169f318-424b0221-1fa400-1536470e42c86e%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; _ga=GA1.1.1714963101.1457679031; __utma=111872281.1714963101.1457679031.1459232354.1459232354.1; __utmz=111872281.1459232354.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none) 
+
+--------
+
+IE
+
+Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */* 
+Accept-Language: zh-tw 
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E) 
+Accept-Encoding: gzip, deflate 
+Host: localhost:8080 
+Connection: Keep-Alive 

@@ -1,0 +1,1 @@
+https://github.com/khanamiryan/php-qrcode-detector-decoder

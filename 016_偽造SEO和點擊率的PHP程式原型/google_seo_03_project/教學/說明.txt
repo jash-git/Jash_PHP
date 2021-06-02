@@ -1,0 +1,4 @@
+01.index.html->搜尋
+02.從畫面抓下所有網址存成ANSI的文字檔
+03.index01.html->寫入DB
+04.開SEO_APP

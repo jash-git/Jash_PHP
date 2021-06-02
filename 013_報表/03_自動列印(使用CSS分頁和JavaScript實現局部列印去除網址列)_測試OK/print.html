@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>自動分頁列印！</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+		<SCRIPT LANGUAGE='JavaScript'>
+			var iID;
+			function doPrint()
+			{
+				clearTimeout(iID);
+				
+				bdhtml=window.document.body.innerHTML;    
+				sprnstr="<!--startprint-->";    
+				eprnstr="<!--endprint-->";    
+				prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);    
+				prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));    
+				window.document.body.innerHTML=prnhtml; 
+				window.print();  
+				window.document.body.innerHTML="";
+				history.go(-1);
+			}
+			function autoclick()
+			{
+				lnk = document.getElementById("auto");
+				lnk.click();
+			}
+			function RunTimer()
+			{
+				iID=setTimeout("autoclick();",100);
+			}
+		</SCRIPT>		
+	</HEAD>
+	<BODY onLoad=RunTimer();>
+		<CENTER><button id='auto' type="button" onclick="doPrint()">列印</button><CENTER>	
+		<BR><BR>	
+		<!--startprint--><!--注意要加上html裡star和end的這兩個標記，之前沒加，一直沒效果，誰叫咱們菜呢~-->
+		<CENTER>這是列印的第一頁！</CENTER>
+
+		<P style='page-break-after:always'></P>
+
+		<CENTER>這是列印的第二頁！</CENTER>
+		<!--endprint-->
+	</BODY>
+</HTML>

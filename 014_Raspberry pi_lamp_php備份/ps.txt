@@ -1,0 +1,5 @@
+http://192.168.104.xxx/phpMyAdmin/
+root/qwertyuop
+------------------
+\\192.168.104.xxx\sambashare
+pi/1234567890

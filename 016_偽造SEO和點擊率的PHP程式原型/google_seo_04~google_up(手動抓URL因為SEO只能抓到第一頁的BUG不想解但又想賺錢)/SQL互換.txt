@@ -1,0 +1,44 @@
+
+其他資料庫轉PostgreSQL(Converting from other Databases to PostgreSQL)
+	官方文件:https://wiki.postgresql.org/wiki/Converting_from_other_Databases_to_PostgreSQL#MySQL
+
+pgsql to mysql
+	http://stackoverflow.com/questions/5909223/migrate-database-from-postgres-to-mysql
+	
+ms2my: MSSQL to MySQL converter
+	http://sourceforge.net/projects/ms2my/
+	
+mysqldump
+http://dba.tw/index.php?topic=137.0
+http://fecbob.pixnet.net/blog/post/39094155-mysqldump%E5%82%99%E4%BB%BD%E9%82%84%E5%8E%9F%E5%92%8Cmysqldump%E5%B0%8E%E5%85%A5%E5%8C%AF%E5%87%BA%E8%AA%9E%E5%8F%A5%E5%A4%A7%E5%85%A8%E8%A9%B3
+
+
+php sql express
+https://msdn.microsoft.com/zh-tw/windowsserver/dd794783.aspx
+http://evabow.blogspot.tw/2012/02/php-sql-server.html
+http://mike7120.blogspot.tw/2011/05/phpodbcms-sql.html
+http://hacgis.pixnet.net/blog/post/26036987-ms-sql-server-%E9%80%A3%E7%B7%9A%E7%9A%84%E4%BD%9C%E6%B3%95
+http://pclevinblog.pixnet.net/blog/post/314562226-%5Bsql-server%5D%E4%B8%8B%E8%BC%89%E5%AE%89%E8%A3%9D-sql-server-2012-express
+
+php mssql_connect
+http://webcheatsheet.com/php/connect_mssql_database.php
+
+
+private void button1_Click(object sender, EventArgs e)
+{
+    string strConn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\test.mdb";
+    OleDbConnection conn = new OleDbConnection(strConn);
+
+    string strCmd = "SELECT * FROM Table";
+    OleDbCommand cmd = new OleDbCommand(strCmd, conn);
+
+    conn.Open();
+    OleDbDataReader dr = cmd.ExecuteReader();
+    int filedCount = dr.FieldCount;
+    for (int i = 0; i < filedCount; i++)
+    {
+        MessageBox.Show(string.Format("ColumnName: {0}, DataType: {1}, FiledType: {2}",
+        dr.GetName(i), dr.GetDataTypeName(i), dr.GetFieldType(i)));
+    }
+    conn.Close();
+}
